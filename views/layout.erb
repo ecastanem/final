@@ -11,19 +11,88 @@
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/0a4dc32e23.js" crossorigin="anonymous"></script>     
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
     
     <!-- Your own CSS -->
     <link rel="stylesheet" href="/styles.css">
+    <link rel="shortcut icon" href="./Logo1.png" type="image/x-icon" />
 
-    <title>Hello world!</title>
+
+    <title>Zhuli</title>
   </head>
   <body>
+      <div class="top_page">
+        <nav class="nav justify-content-end">
+        </nav>
+          
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #66c6b4;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Iniciar Sesión</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Registrate</a>
+                </li>      
+              </ul>
+            </div>
+          </nav>
 
-    <div class="container mt-5">
-      <%= yield %>
+    </div>
+
+    <div class="container-fluid">
+        <%= yield %>
+    </div>
+    
+    <div class="bottom-page" style="background-color: #6414ab;">
+      <div class="container footer">
+        <div class="row pie_pagina">
+          <div class="col-lg-3 pie_pagina_icon">
+            <img class="pie_pagina" src="./resources/images/logos/logo4.png" alt="">
+          </div>  
+          <div class="col-lg-3">
+            <ul><h5>Menú Principal</h5></ul>
+            <ul><a class="pie_pagina" href="boutique.html">Boutique Floral</a></ul>
+            <ul><a class="pie_pagina" href="eventos.html">Eventos</a></ul>
+            <ul><a class="pie_pagina" href="registrate.html">Registrate</a></ul>
+          </div>
+          <div class="col-lg-3">
+            <ul><h5>Pie de Página</h5></ul>
+            <ul><a class="pie_pagina" href="">Sobre Nosotros</a></ul>
+            <ul><a class="pie_pagina" href="tel:5527666455">55 27 66 64 55</a></ul>
+            <ul><a class="pie_pagina" href="mailto:artefloralsensai@gmail.com">artefloralsensai@gmail.com</a></ul>
+          </div>
+          <div class="col-lg-3">
+              <ul><h5>Redes Sociales</h5></ul>
+              <ul>
+                <a class="pie_pagina" href="https://www.instagram.com/senaiartefloral/" target="_blank">
+                  <i class="fab fa-instagram fa-2x"></i>
+                </a>
+              </ul>
+              <ul>
+                <a class="pie_pagina" href="https://www.facebook.com/SensaiAF/" target="_blank">
+                  <i class="fab fa-facebook-square fa-2x"></i>
+                </a>
+              </ul>
+              <ul>
+                <a class="pie_pagina" href="https://api.whatsapp.com/send?phone=525527666455&text=&source=&data=&app_absent=" target="_blank">
+                  <i class="fab fa-whatsapp-square fa-2x"></i>
+                </a>
+              </ul>
+          </div>
+        </div>
+
+      </div>
+
     </div>
 
     <!-- Optional JavaScript -->

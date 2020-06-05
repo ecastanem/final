@@ -1,6 +1,53 @@
+/*div{
+    border: 0.1px dashed black;
+}*/
+
 body{
-    background-color: #f2ebe3;
-    font-family: 'Indie Flower', cursive;
+    background-color: #fbffb8;
+    font-family: 'Roboto Slab', serif;
     font-size: 1rem;
     font-weight: normal;
+}
+
+.container {
+    padding-top: 1rem;
+}
+
+
+div.top_page{
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    
+}
+
+div.middle_page{
+    top: 3rem;
+    font-size: 1.5rem;
+    padding-top: 15px;
+}
+
+.navbar{
+    font-size: 1.5rem;
+}
+
+div.nuestro_enfoque{
+    padding-top: 2rem;
+    text-align: center;
+    align-items: center;
+    border: 0px dashed black;
+    background-color: #fbffb8
+}
+
+div.sobre_nosotros{
+    text-align: center;
+    align-items: center;
+}
+
+div.img_sobre_nosotros{
+    align-content: center;
+}
+img.img_sobre_nosotros{
+    max-width: 100%;
 }

@@ -17,3 +17,9 @@ after { puts; }                                                                 
 
 # events_table = DB.from(:events)
 # rsvps_table = DB.from(:rsvps)
+
+# Home page (all events)
+get "/" do
+    # before stuff runs
+    view "index"
+end
