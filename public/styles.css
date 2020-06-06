@@ -37,7 +37,7 @@ div.nuestro_enfoque{
     text-align: center;
     align-items: center;
     border: 0px dashed black;
-    background-color: #fbffb8
+    background-color: #fbffb8;
 }
 
 div.sobre_nosotros{
@@ -50,4 +50,8 @@ div.img_sobre_nosotros{
 }
 img.img_sobre_nosotros{
     max-width: 100%;
+}
+
+p.card-text{
+    font-size: 1rem !important;
 }
