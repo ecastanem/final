@@ -3,7 +3,8 @@
 }*/
 
 body{
-    background-color: #fbffb8;
+    /*background-color: #fbffb8;*/
+    background-color: #f7f8f4;
     font-family: 'Roboto Slab', serif;
     font-size: 1rem;
     font-weight: normal;
@@ -33,11 +34,17 @@ div.middle_page{
 }
 
 div.nuestro_enfoque{
-    padding-top: 2rem;
+    padding-top: 2.5rem;
     text-align: center;
     align-items: center;
     border: 0px dashed black;
-    background-color: #fbffb8;
+/*    background-color: #fbffb8;*/
+    background-color: #f7f8f4;
+
+}
+div.row.nuestro_enfoque{
+    padding-top:1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 div.sobre_nosotros{
@@ -54,4 +61,20 @@ img.img_sobre_nosotros{
 
 p.card-text{
     font-size: 1rem;
+}
+
+.pie_pagina{    
+    text-align: center;
+}
+.container.footer {
+    padding-top: 0rem;
+}
+
+.pie_pagina_icon{
+    padding-top: 15px;
+    padding-bottom: 15px; 
+}
+
+img.pie_pagina{
+    max-width: 20%;
 }
