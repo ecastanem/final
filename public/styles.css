@@ -59,7 +59,7 @@ img.img_sobre_nosotros{
     max-width: 100%;
 }
 
-div.nuevo_usuario{
+div.nuevo_usuario{    
     text-align: center;
     align-items: center;
 }
@@ -128,4 +128,8 @@ fieldset[disabled] .btn-custom:active,
 fieldset[disabled] .btn-custom.active {
   background-color: #66c6b4;
   border-color: #66c6b4;
+}
+
+.row.nuevo_usuario{
+    display: inline;
 }
