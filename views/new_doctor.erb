@@ -1,0 +1,116 @@
+    <div class="middle_page">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 nuevo_usuario">
+                    <h1 class="nuevo_usuario"><b>¡Bienvenido!</b></h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 nuevo_usuario">
+                    <p class="nuevo_usuario"><b>Zhuli:</b> Por favor ayúdame a llenar la siguiente forma de registro. 
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 nuevo_usuario">
+                    <h2 class="nuevo_usuario"><b>Datos de Contacto</b></h2>
+                </div>
+            </div>
+            <div class="row">
+                <form action="/users/create" method="POST">
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="inputNombres">Nombre(s)</label>
+                            <input type="text" class="form-control" id="inputNombres" name="name" placeholder="María Cristina">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputapaterno">Apellido Paterno</label>
+                            <input type="text" class="form-control" id="inputapaterno" name="a_paterno" placeholder="Castañeda">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputamaterno">Apellido Materno</label>
+                            <input type="text" class="form-control" id="inputamaterno" name="a_materno" placeholder="Martínez">
+                        </div>
+
+                    </div>
+                
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputemail">Email</label>
+                            <input type="email" class="form-control" id="inputemail" name="email" placeholder="mariacastaneda@ejemplo.com">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Password</label>
+                            <input type="password" class="form-control" id="inputPassword4" name="password" placeholder="**********">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputdirecion">Calle y Número Exterior</label>
+                        <input type="text" class="form-control" id="inputdirecion" name="direccion" placeholder="Av. Patriotismo 67">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputinterior">Interior</label>
+                        <input type="text" class="form-control" id="inputinterior" name="interior" placeholder="Consultorio 621">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputcolonia">Colonia</label>
+                            <input type="text" class="form-control" id="inputcolonia" name="colonia"  placeholder="Col. San Juan">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputestado">Estado</label>
+                            <select id="inputestado" class="form-control" name="estado">
+                                <option selected>Ciudad de México</option>
+                                <option>Aguascalientes</option>
+                                <option>Baja California</option>
+                                <option>Baja California Sur</option>
+                                <option>Campeche</option>
+                                <option>Ciudad de México</option>
+                                <option>Chihuahua</option>
+                                <option>Chiapas</option>
+                                <option>Coahuila de Zaragoza</option>
+                                <option>Colima</option>
+                                <option>Durango</option>
+                                <option>Guerrero</option>
+                                <option>Guanajuato</option>
+                                <option>Hidalgo</option>
+                                <option>Jalisco</option>
+                                <option>México</option>
+                                <option>Michoacán de Ocampo</option>
+                                <option>Morelos</option>
+                                <option>Nayarit</option>
+                                <option>Nuevo León</option>
+                                <option>Oaxaca</option>
+                                <option>Puebla</option>
+                                <option>Quintana Roo</option>
+                                <option>Querétaro</option>
+                                <option>Sinaloa</option>
+                                <option>San Luis Potosí</option>
+                                <option>Sonora</option>
+                                <option>Tabasco</option>
+                                <option>Tamaulipas</option>
+                                <option>Tlaxcala</option>
+                                <option>Veracruz de Ignacio de la Llave</option>
+                                <option>Yucatán</option>
+                                <option>Zacatecas</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                        <label for="inputzip">C.P.</label>
+                        <input type="text" class="form-control" id="inputzip" name="zipcode" placeholder="03720">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck" name="check_terminos">
+                            <label class="form-check-label" for="gridCheck">Acepto términos y condiciones.</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-custom">Registrarme</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
