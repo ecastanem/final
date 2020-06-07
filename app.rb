@@ -21,7 +21,7 @@ doctors_table = DB.from(:doctors)
 
 before do
     # SELECT * FROM users WHERE id = session[:user_id]
-    @current_user = users_table.where(:id => session[:user_id]).to_a[0]
+    @current_user = doctors_table.where(:id => session[:user_id]).to_a[0]
     puts @current_user.inspect
 end
 
@@ -101,4 +101,10 @@ post "/login/create" do
     else 
         view "create_login_failed"
     end
+end
+
+# Logout
+get "/logout" do
+    session[:user_id] = nil
+    view "logout"
 end
