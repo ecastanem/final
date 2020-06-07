@@ -1,5 +1,6 @@
 # Set up for the application and database. DO NOT CHANGE. #############################
 require "sequel"                                                                      #
+require "bcrypt"                                                                      #
 connection_string = ENV['DATABASE_URL'] || "sqlite://#{Dir.pwd}/development.sqlite3"  #
 DB = Sequel.connect(connection_string)                                                #
 #######################################################################################
@@ -31,7 +32,7 @@ doctors_table.insert(name: "Jesús Esteban",
                         a_materno: "Martínez",
                         phone: "55-37-23-31-09",
                         email: "ecastanem88@gmail.com",
-                        password: "1234",
+                        password: BCrypt::Password.create("1234"),
                         ced_lic: "7364466",
                         ced_esp1: "9731652",
                         ced_esp2: "",

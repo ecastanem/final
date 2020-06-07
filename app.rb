@@ -19,6 +19,12 @@ after { puts; }                                                                 
 # rsvps_table = DB.from(:rsvps)
 doctors_table = DB.from(:doctors)
 
+before do
+    # SELECT * FROM users WHERE id = session[:user_id]
+    @current_user = users_table.where(:id => session[:user_id]).to_a[0]
+    puts @current_user.inspect
+end
+
 # Home page
 get "/" do
     # before stuff runs
@@ -68,5 +74,31 @@ post "/new_doctor/created" do
                                 :check_terminos => params["check_terminos"])
         # before stuff runs
         view "new_doctor_created"
+    end
+end
+
+# Form to login
+get "/login" do
+    view "user_login"
+end
+
+# Receiving end of login form
+post "/login/create" do
+    puts params
+    email_entered = params["email"]
+    password_entered = params["password"]
+    # SELECT * FROM users WHERE email = email_entered
+    user = doctors_table.where(:email => email_entered).to_a[0]
+    if user
+        puts user.inspect
+        # test the password against the one in the users table
+        if BCrypt::Password.new(user[:password]) == password_entered
+            session[:user_id] = user[:id]
+            view "login_create"
+        else
+            view "create_login_failed"
+        end
+    else 
+        view "create_login_failed"
     end
 end
