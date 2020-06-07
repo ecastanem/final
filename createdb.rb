@@ -31,14 +31,15 @@ doctors_table.insert(name: "Jesús Esteban",
                         a_paterno: "Castañeda",
                         a_materno: "Martínez",
                         phone: "55-37-23-31-09",
-                        email: "ecastanem@gmail.com",
+                        email: "ecastanem88@gmail.com",
                         password: "1234",
                         ced_lic: "7364466",
                         ced_esp1: "9731652",
+                        ced_esp2: "",
                         direccion: "General Pedro Hinojosa 39",
                         colonia: "Col. Daniel Garza",
                         estado: "Ciudad de México",
-                        zipcode: "11830"
-                        check_terminos: True)
+                        zipcode: "11830",
+                        check_terminos: "on")
 
 
