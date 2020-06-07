@@ -1,0 +1,29 @@
+    <div class="middle_page">
+
+        <div class="container about_us">
+          <div class="row">
+            <div class="col-lg-6 img_sobre_nosotros">
+              <img src="./Logo1.png" class="img_sobre_nosotros" alt="">
+
+            </div>
+            <div class="col-lg-6 sobre_nosotros">
+              <h1 class="sobre_nosotros"><b>¡Bienvenido!</b></h1>
+              <p class="sobre_nosotros"> 
+                <b>Zhuli:</b> vamos a iniciar sesión con el email y password que registraste.  
+              </p>
+
+              <form action="/login/create" method="POST">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" placeholder="name@example.com" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" placeholder="**********" name="password" required>
+                     </div>
+                    <button type="submit" class="btn btn-primary">Sign In</button>
+                </form>
+            </div>
+          </div>
+        </div>
+    </div>

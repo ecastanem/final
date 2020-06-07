@@ -15,7 +15,7 @@
             </div>
 
             <div class="row nuevo_usuario">
-                <form action="/users/create" method="POST">
+                <form action="/new_doctor/created" method="POST">
                     <div class="row nuevo_usuario">
                         <div class="col-lg-12 nuevo_usuario">
                             <h2 class="nuevo_usuario"><b>Datos de Contacto</b></h2>
@@ -24,27 +24,31 @@
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="inputNombres">Nombre(s)</label>
-                            <input type="text" class="form-control" id="inputNombres" name="name" placeholder="María Cristina">
+                            <input type="text" class="form-control" id="inputNombres" name="name" placeholder="María Cristina" required>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputapaterno">Apellido Paterno</label>
-                            <input type="text" class="form-control" id="inputapaterno" name="a_paterno" placeholder="Castañeda">
+                            <input type="text" class="form-control" id="inputapaterno" name="a_paterno" placeholder="Castañeda" required>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputamaterno">Apellido Materno</label>
-                            <input type="text" class="form-control" id="inputamaterno" name="a_materno" placeholder="Martínez">
+                            <input type="text" class="form-control" id="inputamaterno" name="a_materno" placeholder="Martínez" required>
                         </div>
 
                     </div>
                 
                     <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputemail">Email</label>
-                            <input type="email" class="form-control" id="inputemail" name="email" placeholder="mariacastaneda@ejemplo.com">
+                        <div class="form-group col-md-4">
+                            <label for="inputtel">Teléfono</label>
+                            <input type="tel" class="form-control" id="inputtel" name="phone" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" placeholder="55-55-55-55-55" required>
                         </div>
-                        <div class="form-group col-md-6">
+                        <div class="form-group col-md-4">
+                            <label for="inputemail">Email</label>
+                            <input type="email" class="form-control" id="inputemail" name="email" placeholder="mariacastaneda@ejemplo.com" required>
+                        </div>
+                        <div class="form-group col-md-4">
                             <label for="inputPassword4">Password</label>
-                            <input type="password" class="form-control" id="inputPassword4" name="password" placeholder="**********">
+                            <input type="password" class="form-control" id="inputPassword4" name="password" placeholder="**********" required>
                         </div>
                     </div>
                      <div class="row nuevo_usuario">
@@ -53,24 +57,40 @@
                         </div>
                     </div>
 
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="inputcedmg">Cédula Médico General</label>
+                            <input type="text" class="form-control" id="inputcedmg" name="ced_lic" placeholder="0123456789" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputcede1">Cédula Especialidad (1)</label>
+                            <input type="text" class="form-control" id="inputcede1" name="ced_esp1" placeholder="0123456789">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputcede2">Cédula Especialidad (2)</label>
+                            <input type="text" class="form-control" id="inputcede2" name="ced_esp2" placeholder="0123456789">
+                        </div>
+                    </div>
+
                     <div class="row nuevo_usuario">
                         <div class="col-lg-12 nuevo_usuario">
                             <h2 class="nuevo_usuario"><b>Consultorio Principal</b></h2>
                         </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="inputdirecion">Calle y Número Exterior</label>
-                        <input type="text" class="form-control" id="inputdirecion" name="direccion" placeholder="Av. Patriotismo 67">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputinterior">Interior</label>
-                        <input type="text" class="form-control" id="inputinterior" name="interior" placeholder="Consultorio 621">
+                    <div class="form-row">
+                        <div class="form-group col-md-10">
+                            <label for="inputdirecion">Calle y Número Exterior</label>
+                            <input type="text" class="form-control" id="inputdirecion" name="direccion" placeholder="Av. Patriotismo 67" required>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputinterior">Interior</label>
+                            <input type="text" class="form-control" id="inputinterior" name="interior" placeholder="Consultorio 621">
+                        </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputcolonia">Colonia</label>
-                            <input type="text" class="form-control" id="inputcolonia" name="colonia"  placeholder="Col. San Juan">
+                            <input type="text" class="form-control" id="inputcolonia" name="colonia"  placeholder="Col. San Juan" required>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputestado">Estado</label>
@@ -111,13 +131,13 @@
                             </select>
                         </div>
                         <div class="form-group col-md-2">
-                        <label for="inputzip">C.P.</label>
-                        <input type="text" class="form-control" id="inputzip" name="zipcode" placeholder="03720">
+                            <label for="inputzip">C.P.</label>
+                            <input type="text" class="form-control" id="inputzip" name="zipcode" placeholder="03720" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck" name="check_terminos">
+                            <input class="form-check-input" type="checkbox" id="gridCheck" name="check_terminos" required>
                             <label class="form-check-label" for="gridCheck">Acepto términos y condiciones.</label>
                         </div>
                     </div>
