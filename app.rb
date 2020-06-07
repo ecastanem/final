@@ -24,20 +24,27 @@ get "/" do
     view "index"
 end
 
-#Sign up as a user
+#Sign up as a new user
 get "/new_user" do
     # before stuff runs
     view "new_user"
 end
 
-#Sign up as a customer
+#Sign up as a new customer form
 get "/new_customer" do
     # before stuff runs
     view "new_customer"
 end
 
-#Sign up as a doctor
+#Sign up as a new doctor form
 get "/new_doctor" do
     # before stuff runs
     view "new_doctor"
+end
+
+#Sign up as a new doctor form
+post "/new_doctor/created" do
+    puts params
+    # before stuff runs
+    view "new_doctor_created"
 end

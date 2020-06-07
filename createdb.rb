@@ -5,31 +5,40 @@ DB = Sequel.connect(connection_string)                                          
 #######################################################################################
 
 # Database schema - this should reflect your domain model
-DB.create_table! :events do
+DB.create_table! :doctors do
   primary_key :id
-  String :title
-  String :description, text: true
-  String :date
-  String :location
-end
-DB.create_table! :rsvps do
-  primary_key :id
-  foreign_key :event_id
-  Boolean :going
   String :name
+  String :a_paterno
+  String :a_materno
+  String :phone
   String :email
-  String :comments, text: true
+  String :password
+  String :ced_lic
+  String :ced_esp1
+  String :ced_esp2
+  String :direccion
+  String :interior
+  String :colonia
+  String :estado
+  String :zipcode
+  Boolean :check_terminos
 end
 
 # Insert initial (seed) data
-events_table = DB.from(:events)
+doctors_table = DB.from(:doctors)
 
-events_table.insert(title: "Bacon Burger Taco Fest", 
-                    description: "Here we go again bacon burger taco fans, another Bacon Burger Taco Fest is here!",
-                    date: "June 21",
-                    location: "Kellogg Global Hub")
+doctors_table.insert(name: "Jesús Esteban",
+                        a_paterno: "Castañeda",
+                        a_materno: "Martínez",
+                        phone: "55-37-23-31-09",
+                        email: "ecastanem@gmail.com",
+                        password: "1234",
+                        ced_lic: "7364466",
+                        ced_esp1: "9731652",
+                        direccion: "General Pedro Hinojosa 39",
+                        colonia: "Col. Daniel Garza",
+                        estado: "Ciudad de México",
+                        zipcode: "11830"
+                        check_terminos: True)
 
-events_table.insert(title: "Kaleapolooza", 
-                    description: "If you're into nutrition and vitamins and stuff, this is the event for you.",
-                    date: "July 4",
-                    location: "Nowhere")
+
