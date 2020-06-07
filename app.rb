@@ -17,6 +17,7 @@ after { puts; }                                                                 
 
 # events_table = DB.from(:events)
 # rsvps_table = DB.from(:rsvps)
+doctors_table = DB.from(:doctors)
 
 # Home page
 get "/" do
@@ -45,6 +46,27 @@ end
 #Sign up as a new doctor form
 post "/new_doctor/created" do
     puts params
-    # before stuff runs
-    view "new_doctor_created"
+    email_entered = params["email"]
+    user = doctors.where(:email => email_entered).to_a[0]
+    #Validation of existing user.
+    if user 
+        view "new_doctor_fail"
+    else
+        doctors_table.insert(:name => params["name"],
+                                :a_paterno => params["a_paterno"],
+                                :a_materno => params["a_materno"],
+                                :phone => params["phone"],
+                                :email => params["email"],
+                                :password => BCrypt::Password.create(params["password"])),
+                                :ced_lic => params["ced_lic"],
+                                :ced_esp1 => params["ced_esp1"],
+                                :ced_esp2 => params["ced_esp2"],
+                                :direccion => params["direccion"],
+                                :colonia => params["colonia"],
+                                :estado => params["estado"],
+                                :zipcode => params["zipcode"],
+                                :check_terminos => params["check_terminos"])
+        # before stuff runs
+        view "new_doctor_created"
+    end
 end

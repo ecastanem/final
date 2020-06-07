@@ -26,7 +26,6 @@ end
 
 # Insert initial (seed) data
 doctors_table = DB.from(:doctors)
-
 doctors_table.insert(name: "Jesús Esteban",
                         a_paterno: "Castañeda",
                         a_materno: "Martínez",
@@ -41,5 +40,7 @@ doctors_table.insert(name: "Jesús Esteban",
                         estado: "Ciudad de México",
                         zipcode: "11830",
                         check_terminos: "on")
+
+
 
 
