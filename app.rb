@@ -47,7 +47,7 @@ end
 post "/new_doctor/created" do
     puts params
     email_entered = params["email"]
-    user = doctors.where(:email => email_entered).to_a[0]
+    user = doctors_table.where(:email => email_entered).to_a[0]
     #Validation of existing user.
     if user 
         view "new_doctor_fail"
@@ -57,7 +57,7 @@ post "/new_doctor/created" do
                                 :a_materno => params["a_materno"],
                                 :phone => params["phone"],
                                 :email => params["email"],
-                                :password => BCrypt::Password.create(params["password"])),
+                                :password => BCrypt::Password.create(params["password"]),
                                 :ced_lic => params["ced_lic"],
                                 :ced_esp1 => params["ced_esp1"],
                                 :ced_esp2 => params["ced_esp2"],
