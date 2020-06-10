@@ -1,0 +1,84 @@
+ <div class="middle_page">
+
+        <div class="container">
+            <div class="row nuevo_usuario">
+                <div class="col-lg-12 nuevo_usuario">
+                    <h1 class="nuevo_usuario"><b>Perfíl</b></h1>
+                </div>
+            </div>
+
+            <div class="row nuevo_usuario">
+                <div class="col-lg-12 nuevo_usuario">
+                    <p class="nuevo_usuario"><b>Zhuli:</b> A continuación le muestro su perfíl
+                    </p>
+                </div>
+            </div>
+
+            <div class="row nuevo_usuario">
+                <div class="row nuevo_usuario">
+                    <div class="col-lg-12 nuevo_usuario">
+                        <h2 class="nuevo_usuario"><b>Datos de Contacto</b></h2>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col-md-4">
+                            <label><b>Nombre(s)</b></label>
+                            <p> <%=@current_user[:name]%> </p>
+                        </div>
+                        <div class="col-md-4">
+                            <label><b>Apellido Paterno</b></label>
+                            <p> <%=@current_user[:a_paterno]%> </p>
+                        </div>
+                        <div class="col-md-4">
+                            <label><b>Apellido Materno</b></label>
+                            <p> <%=@current_user[:a_materno]%> </p>
+                        </div>
+                </div>
+                <div class="row">
+                        <div class="col-md-6">
+                            <label><b>Teléfono</b></label>
+                            <p> <%=@current_user[:phone]%> </p>
+                        </div>
+                        <div class="col-md-6">
+                            <label><b>email</b></label>
+                            <p> <%=@current_user[:email]%> </p>
+                        </div>
+                </div>
+                <div class="row">
+                        <div class="col-md-3">
+                            <label><b>Calle y Número</b></label>
+                            <p> <%=@current_user[:direccion]%> </p>
+                        </div>
+                        <div class="col-md-3">
+                            <label><b>Colonia</b></label>
+                            <p> <%=@current_user[:colonia]%> </p>
+                        </div>
+                        <div class="col-md-3">
+                            <label><b>Estado</b></label>
+                            <p> <%=@current_user[:estado]%> </p>
+                        </div>
+                        <div class="col-md-3">
+                            <label><b>Código Postal</b></label>
+                            <p> <%=@current_user[:zipcode]%> </p>
+                        </div>
+                </div>
+                <div class="row ">
+                    <div class="col-lg-12 ">
+                        <h2 class="nuevo_usuario"><b>Ubicación</b></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <iframe
+                            width="600"
+                            height="450"
+                            frameborder="0" 
+                            style="border:0"
+                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCtovsQvkIUWlNqtYwXY87gEd4ZSmJEhMw&q=<%= @lat_long %>&zoom=15" allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>

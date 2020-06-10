@@ -13,6 +13,7 @@ DB.create_table! :doctors do
   String :a_materno
   String :phone
   String :email
+  String :user_email
   String :password
   String :ced_lic
   String :ced_esp1
@@ -30,16 +31,17 @@ doctors_table = DB.from(:doctors)
 doctors_table.insert(name: "Jesús Esteban",
                         a_paterno: "Castañeda",
                         a_materno: "Martínez",
-                        phone: "55-37-23-31-09",
+                        phone: "5537233109",
                         email: "ecastanem88@gmail.com",
+                        user_email: BCrypt::Password.create("ecastanem88@gmail.com"),
                         password: BCrypt::Password.create("1234"),
                         ced_lic: "7364466",
                         ced_esp1: "9731652",
                         ced_esp2: "",
-                        direccion: "General Pedro Hinojosa 39",
-                        colonia: "Col. Daniel Garza",
+                        direccion: "Av. Patriotismo 67",
+                        colonia: "Col. San Juan",
                         estado: "Ciudad de México",
-                        zipcode: "11830",
+                        zipcode: "03730",
                         check_terminos: "on")
 
 

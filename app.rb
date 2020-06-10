@@ -63,6 +63,7 @@ post "/new_doctor/created" do
                                 :a_materno => params["a_materno"],
                                 :phone => params["phone"],
                                 :email => params["email"],
+                                :user_email => BCrypt::Password.create(params["email"]),
                                 :password => BCrypt::Password.create(params["password"]),
                                 :ced_lic => params["ced_lic"],
                                 :ced_esp1 => params["ced_esp1"],
@@ -108,3 +109,13 @@ get "/logout" do
     session[:user_id] = nil
     view "logout"
 end
+
+#Show doctors Profil
+get "/doctor_profile/:user_email" do
+    puts params
+    @direccion_completa = '"'+@current_user[:direccion]+", "+@current_user[:estado]+" "+@current_user[:zipcode]+'"'
+    puts @direccion_completa
+    results = Geocoder.search(@direccion_completa)
+    @lat_long = results.first.coordinates.join(",")
+    view "doctor_profile"
+end  

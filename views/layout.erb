@@ -50,6 +50,10 @@
                     Usuario: <%= @current_user[:name] %>
                 </li>
                 <li class="nav-item">
+                    <a href="/doctor_profile/<%=@current_user[:user_email]%>" class="nav-link">Perfíl</a>
+                </li>
+
+                <li class="nav-item">
                     <a href="/logout" class="nav-link">Cerrar Sesión</a>
                 </li>
                </ul>
